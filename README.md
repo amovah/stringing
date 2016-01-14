@@ -29,7 +29,7 @@ Default:
 }
 ```
 
-Your object must includes one of your dictionary parts.
+Your object must includes one part of your dictionary at least.
 
 You can change the percent usage of any part of your dictionary through increasing or decreasing the number of the part.
 
