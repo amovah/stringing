@@ -1,4 +1,4 @@
-# stringer
+# stringing
 
 Generate random string with custom dictionary if you want to use a custom dictionary, just follow the rules. It's Fast, simple and lightweight.
 
@@ -65,19 +65,19 @@ for comprehension see [examples](#examples).
 ## Examples
 
 ```javascript
-var stringer = require('stringer');
+var stringing = require('stringing');
 
-stringer();
+stringing();
 // '9R*uw&>UZ6'
 
-stringer({
+stringing({
   number: 20,
   lower: 2,
   upper: 1
 }, 20);
 // '9imfr8c459IC8389378D' - More number
 
-stringer({ uniqueWords: 1, number: 10 }, 20, {
+stringing({ uniqueWords: 1, number: 10 }, 20, {
   uniqueWords: 'JS-Node-ES2015_something',
   number: '123'
 });

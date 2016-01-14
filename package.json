@@ -1,14 +1,14 @@
 {
-  "name": "stringer",
+  "name": "stringing",
   "version": "1.0.0",
-  "description": "Generate random string",
+  "description": "enerate random string with custom dictionary if you want to use a custom dictionary",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amovah/stringer.git"
+    "url": "git+https://github.com/amovah/stringing.git"
   },
   "keywords": [
     "string",
@@ -22,9 +22,9 @@
   "author": "Ali Movahedi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amovah/stringer/issues"
+    "url": "https://github.com/amovah/stringing/issues"
   },
-  "homepage": "https://github.com/amovah/stringer#readme",
+  "homepage": "https://github.com/amovah/stringing#readme",
   "devDependencies": {
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-es2015": "^6.3.13",
