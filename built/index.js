@@ -3,11 +3,19 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var dictionary = {
-  lower: 'abcdefghijklmnopqrstuvwxyz',
-  upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-  number: '1234567890',
-  symbol: '~!@#$%^&*()_+.,<>?;\'[]{}"|'
+var defaults = {
+  dictionary: {
+    lower: 'abcdefghijklmnopqrstuvwxyz',
+    upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    number: '1234567890',
+    symbol: '~!@#$%^&*()_+.,<>?;\'[]{}"|'
+  },
+  option: {
+    lower: 1,
+    upper: 1,
+    number: 1,
+    symbol: 1
+  }
 };
 
 var random = function random(min, max) {
@@ -26,34 +34,28 @@ function randomize(array) {
     array[current] = _ref[0];
     array[rand] = _ref[1];
 
-    ++current;
-    --limit;
+    current = current + 1;
+    limit = limit - 1;
   }
   return array.slice(0, amount);
 }
 
-Array.prototype.repeat = function (n) {
-  var arr = this;
-  for (var i = 0; i < n; ++i) {
-    arr = arr.concat(this);
+var repeat = function repeat(array, n) {
+  for (var i = 0; i < n; i = i + 1) {
+    array = array.concat(undefined);
   }
 
-  return arr;
+  return array;
 };
 
-exports.default = function () {
-  var option = arguments.length <= 0 || arguments[0] === undefined ? {
-    lower: 1,
-    upper: 1,
-    number: 1,
-    symbol: 1
-  } : arguments[0];
+var stringing = function stringing() {
+  var option = arguments.length <= 0 || arguments[0] === undefined ? defaults.option : arguments[0];
   var length = arguments.length <= 1 || arguments[1] === undefined ? 10 : arguments[1];
-  var dic = arguments.length <= 2 || arguments[2] === undefined ? dictionary : arguments[2];
+  var dictionary = arguments.length <= 2 || arguments[2] === undefined ? defaults.dictionary : arguments[2];
 
   var all = [];
   for (var item in option) {
-    all.push(dic[item].split('').repeat(option[item] - 1));
+    all.push(repeat(dictionary[item].split(''), option[item] - 1));
   }
 
   all = all.reduce(function (a, b) {
@@ -61,8 +63,11 @@ exports.default = function () {
   }, []);
 
   while (all.length < length) {
-    all = all.repeat(1);
-  }return randomize(all, length).join('');
+    all = repeat(all, 1);
+  }
+
+  return randomize(all, length).join('');
 };
 
+exports.default = stringing;
 module.exports = exports['default'];

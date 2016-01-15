@@ -34,7 +34,7 @@ You should use the browserified version in built directory
 
 ### option
 
-Type: `Obbject`, Optional.
+Type: `Object`, Optional.
 
 Default:
 
@@ -106,9 +106,9 @@ stringing({ uniqueWords: 1, number: 10 }, 20, {
 
 Feel free to fill an issue or create a pull request, I'll check it ASAP.
 
-Just remember after any change build your program:
+Just remember, lint and build your code:
 
-`gulp build`
+`gulp lint; gulp build`
 
 ## LICENSE
 
