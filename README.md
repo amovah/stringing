@@ -97,9 +97,10 @@ Generating unique string:
 
 Type: `Number`, Optional.
 
-Default: `10`
+Default: `15`
 
-length of your string.
+length of your string. Please pass a number greater than 14 for more better unique.
+It's not absolute unique, I can call it 'semi-unique'.
 
 ## Examples
 
@@ -116,17 +117,17 @@ stringing.generate({
 }, 20);
 // '9imfr8c459IC8389378D' - Number is more
 
-stringing.generate({ uniqueWords: 1, number: 10 }, 20, {
+stringing.generate({ uniqueWords: 1, number: 4 }, 20, {
   uniqueWords: 'JS-Node-_something',
   number: '123'
 });
-// 'in23hotgNd-es_-'
+// 'n2t2-13122N11eo2ose2'
 
 stringing.unique();
-// '15245c059c'
+// '152460C30708Ac7'
 
 stringing.unique(25);
-// '15245c0da428bc9192c105615'
+// 'C44b6eE2F647A935HgB0HdB1b'
 ```
 
 ## Contributing, Idea, Issue

@@ -29,7 +29,7 @@ function randomize(array, limit = array.length) {
 
 const repeat = (array, n) => {
   for (let i = 0; i < n; i = i + 1) {
-    array = array.concat(this);
+    array = array.concat(array);
   }
 
   return array;
@@ -48,17 +48,25 @@ const generate = (option = defaults.option, length = 10,
       all = repeat(all, 1);
     }
 
+
     return randomize(all, length).join('');
 };
 
-const unique = (length = 10) => {
-  let unique = (new Date().getTime()).toString(16);
+const replace = (item, index) => {
+  if (index % 2 === 0) {
+    return item.toUpperCase();
+  }
+  return item;
+};
+
+const unique = (length = 15) => {
+  let unique = ((new Date().getTime()).toString(random(14, 18)) +
+              parseInt((Math.random() + '').slice(2)).toString(random(14, 18)))
+              .replace(/\w/g, replace);
 
   while (unique.length < length) {
-    unique += randomize(
-      parseInt((Math.random() + '').slice(2)).toString(16).split(''),
-      length
-    ).join('');
+    unique += parseInt((Math.random() + '').slice(2)).toString(random(14, 18))
+              .replace(/\w/g, replace);
   }
 
   return unique.slice(0, length);

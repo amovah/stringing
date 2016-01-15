@@ -43,7 +43,7 @@ function randomize(array) {
 
 var repeat = function repeat(array, n) {
   for (var i = 0; i < n; i = i + 1) {
-    array = array.concat(undefined);
+    array = array.concat(array);
   }
 
   return array;
@@ -70,13 +70,20 @@ var generate = function generate() {
   return randomize(all, length).join('');
 };
 
-var unique = function unique() {
-  var length = arguments.length <= 0 || arguments[0] === undefined ? 10 : arguments[0];
+var replace = function replace(item, index) {
+  if (index % 2 === 0) {
+    return item.toUpperCase();
+  }
+  return item;
+};
 
-  var unique = new Date().getTime().toString(16);
+var unique = function unique() {
+  var length = arguments.length <= 0 || arguments[0] === undefined ? 15 : arguments[0];
+
+  var unique = (new Date().getTime().toString(random(14, 18)) + parseInt((Math.random() + '').slice(2)).toString(random(14, 18))).replace(/\w/g, replace);
 
   while (unique.length < length) {
-    unique += randomize(parseInt((Math.random() + '').slice(2)).toString(16).split(''), length).join('');
+    unique += parseInt((Math.random() + '').slice(2)).toString(random(14, 18)).replace(/\w/g, replace);
   }
 
   return unique.slice(0, length);
