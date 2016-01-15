@@ -8,11 +8,11 @@ Generate random string with custom dictionary if you want to use a custom dictio
 
 with NPM:
 
-`npm i stringer`
+`npm i stringing`
 
 ## Usage
 
-`stringer(option, length, dictionary)`
+`stringing(option, length, dictionary)`
 
 ### option
 
