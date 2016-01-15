@@ -12,8 +12,8 @@ with NPM:
 
 ## Usage
 
-- [stringing.generate](#stringing.generate)
-- [stringing.unique](#stringing.unique)
+- [stringing.generate](#stringinggenerate)
+- [stringing.unique](#stringingunique)
 
 #### in Node.js
 
