@@ -12,7 +12,8 @@ with NPM:
 
 ## Usage
 
-`stringing(option, length, dictionary);`
+- [stringing.generate](#stringing.generate)
+- [stringing.unique](#stringing.unique)
 
 #### in Node.js
 
@@ -32,7 +33,13 @@ You should use the browserified version in built directory
 </script>
 ```
 
-### option
+### stringing.generate
+
+Generating random string:
+
+`stringing.generate(option, length, dictionary);`
+
+#### option
 
 Type: `Object`, Optional.
 
@@ -53,7 +60,7 @@ You can change the percent usage of any part of your dictionary through increasi
 
 for comprehension see [examples](#examples).
 
-### length
+#### length
 
 Type: `Number`, Optional.
 
@@ -61,7 +68,7 @@ Default: `10`
 
 length of your string.
 
-### dictionary
+#### dictionary
 
 Type: `Object`, Optional.
 
@@ -80,26 +87,46 @@ If you want use another dictionary or unique symbols or anything that you want, 
 
 for comprehension see [examples](#examples).
 
+### stringing.unique
+
+Generating unique string:
+
+`stringing.unique(length)`
+
+#### length
+
+Type: `Number`, Optional.
+
+Default: `10`
+
+length of your string.
+
 ## Examples
 
 ```javascript
 var stringing = require('stringing');
 
-stringing();
+stringing.generate();
 // '9R*uw&>UZ6'
 
-stringing({
+stringing.generate({
   number: 20,
   lower: 2,
   upper: 1
 }, 20);
-// '9imfr8c459IC8389378D' - More number
+// '9imfr8c459IC8389378D' - Number is more
 
-stringing({ uniqueWords: 1, number: 10 }, 20, {
-  uniqueWords: 'JS-Node-ES2015_something',
+stringing.generate({ uniqueWords: 1, number: 10 }, 20, {
+  uniqueWords: 'JS-Node-_something',
   number: '123'
 });
-// 22n-32gh3oe33SiNs215'
+// 'in23hotgNd-es_-'
+
+stringing.unique();
+// '15245c059c'
+
+stringing.unique(25);
+// '15245c0da428bc9192c105615'
 ```
 
 ## Contributing, Idea, Issue
@@ -108,7 +135,7 @@ Feel free to fill an issue or create a pull request, I'll check it ASAP.
 
 Just remember, lint and build your code:
 
-`gulp lint; gulp build`
+`gulp lint build`
 
 ## LICENSE
 

@@ -35,7 +35,7 @@ const repeat = (array, n) => {
   return array;
 };
 
-const stringing = (option = defaults.option, length = 10,
+const generate = (option = defaults.option, length = 10,
                   dictionary = defaults.dictionary) => {
     let all = [];
     for (let item in option) {
@@ -51,4 +51,17 @@ const stringing = (option = defaults.option, length = 10,
     return randomize(all, length).join('');
 };
 
-export default stringing;
+const unique = (length = 10) => {
+  let unique = (new Date().getTime()).toString(16);
+
+  while (unique.length < length) {
+    unique += randomize(
+      parseInt((Math.random() + '').slice(2)).toString(16).split(''),
+      length
+    ).join('');
+  }
+
+  return unique.slice(0, length);
+};
+
+export default { generate, unique };

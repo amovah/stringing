@@ -1,7 +1,7 @@
 {
   "name": "stringing",
-  "version": "1.3.0",
-  "description": "enerate random string with custom dictionary if you want to use a custom dictionary",
+  "version": "1.5.1",
+  "description": "Generate random and unique string with custom dictionary",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

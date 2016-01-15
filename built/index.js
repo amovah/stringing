@@ -48,7 +48,7 @@ var repeat = function repeat(array, n) {
   return array;
 };
 
-var stringing = function stringing() {
+var generate = function generate() {
   var option = arguments.length <= 0 || arguments[0] === undefined ? defaults.option : arguments[0];
   var length = arguments.length <= 1 || arguments[1] === undefined ? 10 : arguments[1];
   var dictionary = arguments.length <= 2 || arguments[2] === undefined ? defaults.dictionary : arguments[2];
@@ -69,5 +69,17 @@ var stringing = function stringing() {
   return randomize(all, length).join('');
 };
 
-exports.default = stringing;
+var unique = function unique() {
+  var length = arguments.length <= 0 || arguments[0] === undefined ? 10 : arguments[0];
+
+  var unique = new Date().getTime().toString(16);
+
+  while (unique.length < length) {
+    unique += randomize(parseInt((Math.random() + '').slice(2)).toString(16).split(''), length).join('');
+  }
+
+  return unique.slice(0, length);
+};
+
+exports.default = { generate: generate, unique: unique };
 module.exports = exports['default'];
