@@ -99,8 +99,7 @@ Type: `Number`, Optional.
 
 Default: `15`
 
-length of your string. Please pass a number greater than 14 for more better unique.
-It's not absolute unique, I can call it 'semi-unique'.
+length of your string. Please pass a number greater than 14 for more better unique string.
 
 ## Examples
 
