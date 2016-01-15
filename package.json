@@ -1,6 +1,6 @@
 {
   "name": "stringing",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Generate random and unique string with custom dictionary",
   "main": "index.js",
   "scripts": {
