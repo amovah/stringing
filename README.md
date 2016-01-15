@@ -14,13 +14,13 @@ with NPM:
 
 `stringing(option, length, dictionary);`
 
-### in server-side
+#### in server-side
 
 ```javascript
 var stringing = require('stringing');
 ```
 
-### in browser
+#### in browser
 
 You should use the browserified version in built directory
 
