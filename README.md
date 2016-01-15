@@ -12,7 +12,25 @@ with NPM:
 
 ## Usage
 
-`stringing(option, length, dictionary)`
+`stringing(option, length, dictionary);`
+
+### in server-side
+
+```javascript
+var stringing = require('stringing');
+```
+
+### in browser
+
+You should use the browserified version in built directory
+
+```html
+<script src='built/stringing.min.js'></script>
+<script>
+  // Everything is ready
+  // Do what you want to do
+</script>
+```
 
 ### option
 
