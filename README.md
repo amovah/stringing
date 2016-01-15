@@ -14,7 +14,7 @@ with NPM:
 
 `stringing(option, length, dictionary);`
 
-#### in server-side
+#### in Node.js
 
 ```javascript
 var stringing = require('stringing');
