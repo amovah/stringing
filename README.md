@@ -99,7 +99,7 @@ Type: `Number`, Optional.
 
 Default: `15`
 
-length of your string. Please pass a number greater than 14 for more better unique string.
+length of your string. Please pass a number greater than 14 for better unique string.
 
 ## Examples
 
