@@ -35,14 +35,14 @@ function randomize(array) {
     array[current] = _ref[0];
     array[rand] = _ref[1];
 
-    current = current + 1;
-    limit = limit - 1;
+    ++current;
+    --limit;
   }
   return array.slice(0, amount);
 }
 
 var repeat = function repeat(array, n) {
-  for (var i = 0; i < n; i = i + 1) {
+  for (var i = 0; i < n; ++i) {
     array = array.concat(array);
   }
 

@@ -21,14 +21,14 @@ function randomize(array, limit = array.length) {
     let rand = random(current, len);
     [array[current], array[rand]] = [array[rand], array[current]];
 
-    current = current + 1;
-    limit = limit - 1;
+    ++current;
+    --limit;
   }
   return array.slice(0, amount);
 }
 
 const repeat = (array, n) => {
-  for (let i = 0; i < n; i = i + 1) {
+  for (let i = 0; i < n; ++i) {
     array = array.concat(array);
   }
 
