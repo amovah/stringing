@@ -97,9 +97,9 @@ Generating unique string:
 
 Type: `Number`, Optional.
 
-Default: `15`
+Default: `18`
 
-length of your string. Please pass a number greater than 14 for better unique string.
+length of your string. Please pass a number greater than 18 for better unique string.
 
 ## Examples
 
@@ -123,7 +123,7 @@ stringing.generate({ uniqueWords: 1, number: 4 }, 20, {
 // 'n2t2-13122N11eo2ose2'
 
 stringing.unique();
-// '152460C30708Ac7'
+// '27BE1D4b69123091CD'
 
 stringing.unique(25);
 // 'C44b6eE2F647A935HgB0HdB1b'

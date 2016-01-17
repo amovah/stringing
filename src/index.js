@@ -52,14 +52,14 @@ const generate = (option = defaults.option, length = 10,
     return randomize(all, length).join('');
 };
 
-const replace = (item, index) => {
-  if (index % 2 === 0) {
+const replace = item => {
+  if (random(0, 1)) {
     return item.toUpperCase();
   }
   return item;
 };
 
-const unique = (length = 15) => {
+const unique = (length = 18) => {
   let unique = ((new Date().getTime()).toString(random(14, 18)) +
               parseInt((Math.random() + '').slice(2)).toString(random(14, 18)))
               .replace(/\w/g, replace);

@@ -69,15 +69,15 @@ var generate = function generate() {
   return randomize(all, length).join('');
 };
 
-var replace = function replace(item, index) {
-  if (index % 2 === 0) {
+var replace = function replace(item) {
+  if (random(0, 1)) {
     return item.toUpperCase();
   }
   return item;
 };
 
 var unique = function unique() {
-  var length = arguments.length <= 0 || arguments[0] === undefined ? 15 : arguments[0];
+  var length = arguments.length <= 0 || arguments[0] === undefined ? 18 : arguments[0];
 
   var unique = (new Date().getTime().toString(random(14, 18)) + parseInt((Math.random() + '').slice(2)).toString(random(14, 18))).replace(/\w/g, replace);
 
