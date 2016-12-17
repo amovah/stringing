@@ -37,7 +37,15 @@ You should use the browserified version in built directory
 
 Generating random string:
 
-`stringing.generate(option, length, dictionary);`
+`stringing.generate(length, option, dictionary);`
+
+#### length
+
+Type: `Number`, Optional.
+
+Default: `10`
+
+length of your string.
 
 #### option
 
@@ -59,14 +67,6 @@ Your object must includes one part of your dictionary at least.
 You can change the percent usage of any part of your dictionary through increasing or decreasing the number of the part.
 
 for comprehension see [examples](#examples).
-
-#### length
-
-Type: `Number`, Optional.
-
-Default: `10`
-
-length of your string.
 
 #### dictionary
 

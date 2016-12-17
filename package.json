@@ -1,6 +1,6 @@
 {
   "name": "stringing",
-  "version": "1.6.6",
+  "version": "1.7.0",
   "description": "Generate random and unique string with custom dictionary",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/amovah/stringing#readme",
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-es2015": "^6.3.13",
     "browserify": "^13.0.0",

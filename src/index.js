@@ -35,7 +35,7 @@ const repeat = (array, n) => {
   return array;
 };
 
-const generate = (option = defaults.option, length = 10,
+const generate = (length = 10, option = defaults.option,
                   dictionary = defaults.dictionary) => {
     let all = [];
     for (let item in option) {
@@ -47,7 +47,6 @@ const generate = (option = defaults.option, length = 10,
     while (all.length < length) {
       all = repeat(all, 1);
     }
-
 
     return randomize(all, length).join('');
 };

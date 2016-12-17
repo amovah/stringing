@@ -23,7 +23,7 @@ var random = function random(min, max) {
 };
 
 function randomize(array) {
-  var limit = arguments.length <= 1 || arguments[1] === undefined ? array.length : arguments[1];
+  var limit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : array.length;
 
   var current = 0,
       amount = limit,
@@ -33,6 +33,7 @@ function randomize(array) {
     var _ref = [array[rand], array[current]];
     array[current] = _ref[0];
     array[rand] = _ref[1];
+
 
     ++current;
     --limit;
@@ -49,9 +50,9 @@ var repeat = function repeat(array, n) {
 };
 
 var generate = function generate() {
-  var option = arguments.length <= 0 || arguments[0] === undefined ? defaults.option : arguments[0];
-  var length = arguments.length <= 1 || arguments[1] === undefined ? 10 : arguments[1];
-  var dictionary = arguments.length <= 2 || arguments[2] === undefined ? defaults.dictionary : arguments[2];
+  var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
+  var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaults.option;
+  var dictionary = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaults.dictionary;
 
   var all = [];
   for (var item in option) {
@@ -77,7 +78,7 @@ var replace = function replace(item) {
 };
 
 var unique = function unique() {
-  var length = arguments.length <= 0 || arguments[0] === undefined ? 18 : arguments[0];
+  var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 18;
 
   var unique = (new Date().getTime().toString(random(14, 18)) + parseInt((Math.random() + '').slice(2)).toString(random(14, 18))).replace(/\w/g, replace);
 
