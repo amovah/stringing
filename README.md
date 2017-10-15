@@ -109,14 +109,14 @@ var stringing = require('stringing');
 stringing.generate();
 // '9R*uw&>UZ6'
 
-stringing.generate({
+stringing.generate(20, {
   number: 20,
   lower: 2,
   upper: 1
-}, 20);
+});
 // '9imfr8c459IC8389378D' - Number is more
 
-stringing.generate({ uniqueWords: 1, number: 4 }, 20, {
+stringing.generate(20, { uniqueWords: 1, number: 4 }, {
   uniqueWords: 'JS-Node-_something',
   number: '123'
 });
